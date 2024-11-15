@@ -1,0 +1,225 @@
+/* Estilo general para el cuerpo de la página */
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #d32f2f; /* Fondo rojizo Marvel */
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* Estilo para el título principal (h1) */
+h1 {
+  text-align: center;
+  font-size: 3em;
+  margin: 20px 0;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-family: 'Impact', sans-serif;
+}
+
+/* Estilo para el contenedor del encabezado de la aplicación */
+.app-header {
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 40px;
+}
+
+/* Estilo general para los botones */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: transform 0.3s;
+  font-weight: bold;
+}
+
+/* Efecto hover para los botones */
+button:hover {
+  transform: scale(1.1);
+}
+
+/* Estilo específico para el botón "Ver solo favoritos" */
+.show-favorites-btn {
+  background-color: #e62429;
+  color: white;
+  margin: 20px 0;
+  display: block;
+  width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Efecto hover para el botón de favoritos */
+.show-favorites-btn:hover {
+  background-color: #b91b22;
+}
+
+/* Estilo para el botón "Añadir a favoritos" */
+.add-to-favorites-btn {
+  background-color: #00b300;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Efecto hover para el botón de añadir a favoritos */
+.add-to-favorites-btn:hover {
+  background-color: #008c00;
+}
+
+/* Estilo para el contenedor de la lista de cómics */
+.comic-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilo para cada elemento de cómic en la lista */
+.comic-item {
+  background-color: #fff;
+  border: 5px solid #000;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover para el cómic (ampliación y sombra más fuerte) */
+.comic-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo de las imágenes dentro de cada cómic */
+.comic-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Estilo para el título del cómic */
+.comic-item h3 {
+  text-align: center;
+  color: #333;
+  font-size: 1.3em;
+  padding: 10px;
+  margin: 0;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Efecto hover para cambiar el color del título */
+.comic-item:hover h3 {
+  color: #e62429;
+}
+
+/* Estilo para los detalles del cómic */
+.comic-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 40px;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Ajuste para que el cómic esté a la izquierda y los personajes a la derecha */
+.comic-details .comic-info {
+  width: 60%;
+}
+
+.comic-details .characters {
+  width: 35%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Estilo de las imágenes en los detalles del cómic */
+.comic-details img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para el título de los detalles del cómic */
+.comic-details h2 {
+  font-size: 2.5em;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilo para los párrafos dentro de los detalles del cómic */
+.comic-details p {
+  font-size: 1.1em;
+  text-align: center;
+  margin: 20px;
+}
+
+/* Estilo para los elementos de personajes */
+.character-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  transition: transform 0.3s ease;
+}
+
+/* Efecto hover para ampliar la imagen del personaje */
+.character-item:hover {
+  transform: scale(1.2);
+}
+
+/* Estilo para las imágenes de los personajes */
+.character-item img {
+  width: 120px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Estilo para los nombres de los personajes */
+.character-item h4 {
+  margin-top: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+/* Estilo para la sección de cómics favoritos */
+.favorites-section {
+  text-align: center;
+  padding: 30px;
+}
+
+.favorites-section h3 {
+  font-size: 2em;
+  color: #fff;
+}
+
+/* Sección de cómics favoritos */
+.comic-list-favorites {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  margin: 0 auto;
+}
